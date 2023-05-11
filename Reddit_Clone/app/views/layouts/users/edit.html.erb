@@ -1,0 +1,12 @@
+<h1>Edit <%= @user.username %></h1>
+
+<form action="<%= user_url(@user) %>" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
+
+    <label>Edit Username
+        <input type="text" name="user[username]" value="<%= @user.username %>">
+    </label>
+
+    <button>Update</button>
+</form>
